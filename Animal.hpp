@@ -12,6 +12,9 @@ public:
   virtual ~Animal();
   Animal &operator=(Animal const &src);
   Animal(Animal const &src);
+  const std::string &getType() const;
+
+  virtual void makeSound() const;
 };
 
 #endif // !ANIMAL_HPP

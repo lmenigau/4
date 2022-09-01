@@ -2,7 +2,7 @@
 #define CAT_HPP
 #include "Animal.hpp"
 
-class Cat : Animal {
+class Cat : public Animal {
 private:
 protected:
 public:
@@ -10,6 +10,8 @@ public:
   virtual ~Cat();
   Cat &operator=(Cat const &src);
   Cat(Cat const &src);
+
+  void makeSound() const;
 };
 
 #endif // !CAT_HPP
