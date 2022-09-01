@@ -2,7 +2,7 @@
 #include <iostream>
 
 Cat::Cat() : Animal() { this->type = "Cat"; }
-Cat::~Cat() {}
+Cat::~Cat() { std::cout << "WrongCat dead\n"; }
 Cat::Cat(Cat const &src) { *this = src; }
 Cat &Cat::operator=(Cat const &src) {
   // TODO
