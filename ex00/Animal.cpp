@@ -4,8 +4,7 @@ Animal::Animal() { std::cout << "Animal constructed\n"; }
 Animal::~Animal() { std::cout << "Animal destructed\n"; }
 Animal::Animal(Animal const &src) { *this = src; }
 Animal &Animal::operator=(Animal const &src) {
-  // TODO
-  static_cast<void>(src);
+  type = src.type;
   return *this;
 }
 

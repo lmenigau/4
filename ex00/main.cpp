@@ -28,4 +28,10 @@ int main() {
     i->makeSound(); // will output the cat sound!
     delete i;
   }
+  std::cout << "----------------------------------\n";
+  {
+    Cat cat;
+    Animal a = cat;
+    std::cout << a.getType() << '\n';
+  }
 }
