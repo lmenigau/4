@@ -1,12 +1,12 @@
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 #include <iostream>
 
-Cat::Cat() : Animal() { this->type = "Cat"; }
-Cat::~Cat() { std::cout << "WrongCat dead\n"; }
-Cat::Cat(Cat const &src) { *this = src; }
-Cat &Cat::operator=(Cat const &src) {
+WrongCat::WrongCat() : WrongAnimal() { this->type = "WrongCat"; }
+WrongCat::~WrongCat() { std::cout << "WrongCat dead\n"; }
+WrongCat::WrongCat(WrongCat const &src) { *this = src; }
+WrongCat &WrongCat::operator=(WrongCat const &src) {
   // TODO
   static_cast<void>(src);
   return *this;
 }
-void Cat::makeSound() const { std::cout << "miaou\n"; }
+void WrongCat::makeSound() const { std::cout << "miaou\n"; }
