@@ -22,16 +22,23 @@ int main() {
   }
   std::cout << "------------2222222---------------\n";
   {
-
     const WrongAnimal *i = new WrongCat();
     std::cout << "i:" << i->getType() << '\n';
     i->makeSound(); // will output the cat sound!
     delete i;
   }
+
   std::cout << "------------333333333-------------\n";
   {
     Cat cat;
     Animal a = cat;
+    std::cout << "a: " << a.getType() << '\n';
+  }
+
+  std::cout << "------------444444444-------------\n";
+  {
+    Cat *cat = new Cat;
+    Cat a = *cat;
     std::cout << "a: " << a.getType() << '\n';
   }
 }
