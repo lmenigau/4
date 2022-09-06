@@ -12,7 +12,7 @@ Cat::~Cat() {
   std::cout << "Cat dead\n";
 }
 
-Cat::Cat(Cat const &src) { *this = src; }
+Cat::Cat(Cat const &src) : brain(NULL) { *this = src; }
 Cat &Cat::operator=(Cat const &src) {
   Animal::operator=(src);
   if (brain)

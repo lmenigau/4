@@ -12,10 +12,13 @@ Dog::~Dog() {
   std::cout << "Dog is dead\n";
 }
 
-Dog::Dog(Dog const &src) { *this = src; }
+Dog::Dog(Dog const &src) : brain(NULL) { *this = src; }
 Dog &Dog::operator=(Dog const &src) {
   Animal::operator=(src);
-  *brain = *src.brain;
+  if (brain)
+    *brain = *src.brain;
+  else
+    brain = new Brain();
   return *this;
 }
 void Dog::makeSound() const { std::cout << "wouaf wouaf\n"; }
