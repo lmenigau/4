@@ -13,8 +13,9 @@ int main() {
   {
     std::cout << "_______\n";
     Cat a;
-    Cat b;
+    Cat b(a);
     a = b;
+    Cat c = b;
   }
   std::cout << "_______\n";
   for (int i = 0; i < 10; i++)

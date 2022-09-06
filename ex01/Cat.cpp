@@ -15,7 +15,10 @@ Cat::~Cat() {
 Cat::Cat(Cat const &src) { *this = src; }
 Cat &Cat::operator=(Cat const &src) {
   Animal::operator=(src);
-  *brain = *src.brain;
+  if (brain)
+    *brain = *src.brain;
+  else
+    brain = new Brain();
   return *this;
 }
 void Cat::makeSound() const { std::cout << "miaou\n"; }
