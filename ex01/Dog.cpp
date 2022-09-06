@@ -15,6 +15,7 @@ Dog::~Dog() {
 Dog::Dog(Dog const &src) { *this = src; }
 Dog &Dog::operator=(Dog const &src) {
   Animal::operator=(src);
+  *brain = *src.brain;
   return *this;
 }
 void Dog::makeSound() const { std::cout << "wouaf wouaf\n"; }
